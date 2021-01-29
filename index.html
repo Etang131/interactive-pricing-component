@@ -26,12 +26,13 @@
       <input type="range" min="10" max="1000000" value="50" class="slider" id="myRange">
     </div>
     <p><span id="chargeAmount">16.00</span>/month</p>
-    <label class="switch">
-      <p>Monthly Billing</p>
-      <input type="checkbox">
-      <p>Yearly Billing 25% discount</p>
-      <span class="slider round"></span>
-    </label>
+    <div id="billingToggle" class="switchToggle">
+      <span id="monthly">Monthly Billing</span>
+      <div id="switch"><div id="circle"></div></div>
+      <span id="yearly">Yearly Billing</span>
+      <span id="discount">-25%</span>
+    </div>
+    <hr>
     <div class="benefits">
       <ul>
         <li>Unlimited websites</li>
