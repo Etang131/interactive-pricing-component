@@ -1,3 +1,96 @@
+/*price slider*/
+.slideContainer {
+  margin-top: 25px;
+  text-align: center;
+}
+
+input[type="range"] {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 80%; /* Specific width is required for Firefox. */
+  background: transparent; /* Otherwise white in Chrome */
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type="range"]:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type="range"]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+  /* Hides the slider so custom styles can be added */
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+/*styles for the thumb*/
+/* Special styling for WebKit/Blink */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  box-shadow: 0px 15px 30px rgba(0, 255, 231, 0.6);
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  background: #10d8c4;
+  cursor: pointer;
+  margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+}
+
+/* All the same stuff for Firefox */
+input[type="range"]::-moz-range-thumb {
+  box-shadow: 0px 15px 30px rgba(0, 255, 231, 0.6);
+  border: none;
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  background: #10d8c4;
+  cursor: pointer;
+}
+
+/* All the same stuff for IE */
+input[type="range"]::-ms-thumb {
+  box-shadow: 0px 15px 30px rgba(0, 255, 231, 0.6);
+  border: none;
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  background: #10d8c4;
+  cursor: pointer;
+}
+
+#chargeAmount {
+  color: #293356;
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 2.75rem;
+  letter-spacing: -0.8px;
+  margin-right: 8px;
+}
+
+.monthTitle {
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1.1875rem;
+  text-align: center;
+  color: #848ead;
+  margin: 25px auto;
+}
+
+#billingToggle {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+#switch {
+  margin: 0 10px;
+}
+
 #monthly,
 #yearly {
   color: #848ead;
