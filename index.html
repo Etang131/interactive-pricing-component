@@ -6,22 +6,19 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="css/reset.css">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
   
   <title>Frontend Mentor | Interactive pricing component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
   <div class="container">
-    <h1>Simple, traffic-based pricing</h1>
-  <p class="mainText">Sign-up for our 30-day trial. No credit card required. </p>
+    <div class="heroText">
+      <h1>Simple, traffic-based pricing</h1>
+      <p class="mainText">Sign-up for our 30-day trial. <br> No credit card required. </p>
+    </div>
   <div class="pricingBlock">
-    <p><span id="pageViews">100</span>K PAGEVIEWS</p>
+    <p class="pageViews"><span id="pageViewsAmount">100</span>K PAGEVIEWS</p>
     <div class="slideContainer">
       <input type="range" min="10" max="100" value="50" class="sliderPrice" id="myRange">
     </div>
@@ -39,7 +36,6 @@
         <span id="discount">-25%</span>
       </div> 
     </div> 
-    </div>
     <hr>
     <div class="benefits">
       <ul>
@@ -49,6 +45,7 @@
       </ul>
     </div>
     <button>Start my trial</button>
+    </div>
   </div>
   </div>
   <div class="attribution">
