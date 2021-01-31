@@ -22,15 +22,23 @@
   <p class="mainText">Sign-up for our 30-day trial. No credit card required. </p>
   <div class="pricingBlock">
     <p><span id="pageViews">100</span>K PAGEVIEWS</p>
-    <div class="slidecontainer">
-      <input type="range" min="10" max="1000000" value="50" class="slider" id="myRange">
+    <div class="slideContainer">
+      <input type="range" min="10" max="100" value="50" class="sliderPrice" id="myRange">
     </div>
-    <p><span id="chargeAmount">16.00</span>/month</p>
+    <p class="monthTitle"><span id="chargeAmount">$16.00</span>/month</p>
     <div id="billingToggle" class="switchToggle">
-      <span id="monthly">Monthly Billing</span>
-      <div id="switch"><div id="circle"></div></div>
-      <span id="yearly">Yearly Billing</span>
-      <span id="discount">-25%</span>
+      <div>
+        <span id="monthly">Monthly Billing</span>
+      </div>
+      <div id="switch">
+     <!--<div id="circle">-->     <input type="checkbox">
+      <span class="slider round"></span>
+      </div>
+      <div>
+        <span id="yearly">Yearly Billing</span>
+        <span id="discount">-25%</span>
+      </div> 
+    </div> 
     </div>
     <hr>
     <div class="benefits">
