@@ -3,6 +3,7 @@ body {
   background-position-y: -135px;
   background-repeat: no-repeat;
   font-family: "Manrope", sans-serif;
+  z-index: -1;
 }
 
 .heroText {
@@ -32,9 +33,24 @@ h1 {
 }
 
 .pricingBlock {
+  background: #ffffff;
+  box-shadow: 0px 20px 30px -5px rgba(127, 137, 185, 0.152073);
+  border-radius: 8px;
   width: 327px;
-  margin: 0 auto;
+  height: 478px;
+  margin: 30px auto 25px auto;
   text-align: center;
+  z-index: 1;
+}
+
+.pageViews {
+  color: #848ead;
+  font-weight: 800;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  letter-spacing: 1.71429px;
+  text-transform: uppercase;
+  padding-top: 30px;
 }
 
 /*price slider*/
@@ -102,6 +118,60 @@ input[type="range"]::-ms-thumb {
   cursor: pointer;
 }
 
+/*Styling the track*/
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #3071a9;
+  border-radius: 5px;
+  border: 0.2px solid #010101;
+}
+
+input[type="range"]:focus::-webkit-slider-runnable-track {
+  background: #367ebd;
+}
+
+input[type="range"]::-moz-range-track {
+  width: 100%;
+  height: 8px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #3071a9;
+  border-radius: 5px;
+  border: 0.2px solid #010101;
+}
+
+input[type="range"]::-ms-track {
+  width: 100%;
+  height: 8px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent;
+}
+input[type="range"]::-ms-fill-lower {
+  background: #2a6495;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type="range"]:focus::-ms-fill-lower {
+  background: #3071a9;
+}
+input[type="range"]::-ms-fill-upper {
+  background: #3071a9;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type="range"]:focus::-ms-fill-upper {
+  background: #367ebd;
+}
+/*----------END of the slider -----*/
+
 #chargeAmount {
   color: #293356;
   font-size: 2rem;
@@ -118,6 +188,7 @@ input[type="range"]::-ms-thumb {
   text-align: center;
   color: #848ead;
   margin: 25px auto;
+  padding: 30px 0 10px 0;
 }
 
 #billingToggle {
@@ -216,6 +287,7 @@ input:checked + .slider:before {
 
 hr {
   border-top: #ecf0fb 1px solid;
+  margin: 35px 0 20px 0;
 }
 
 li::before {
@@ -228,7 +300,7 @@ li {
   font-size: 0.75rem;
   font-weight: 600;
   line-height: 1rem;
-  margin-bottom: 5px;
+  margin-bottom: 9px;
 }
 
 button {
@@ -240,6 +312,7 @@ button {
   line-height: 1rem;
   height: 41px;
   width: 170px;
+  margin-top: 25px;
 }
 
 .attribution {
