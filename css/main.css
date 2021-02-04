@@ -1,6 +1,6 @@
 body {
   background-image: url("/images/bg-pattern.svg");
-  background-position-y: -135px;
+  background-position-y: -65px;
   background-repeat: no-repeat;
   font-family: "Manrope", sans-serif;
   z-index: -1;
@@ -41,6 +41,10 @@ h1 {
   margin: 30px auto 25px auto;
   text-align: center;
   z-index: 1;
+}
+
+.desktopPricingSection {
+  display: none;
 }
 
 .pageViews {
@@ -119,18 +123,20 @@ input[type="range"]::-ms-thumb {
 }
 
 /*Styling the track*/
+/*Colors:   background: linear-gradient(90deg, #a4f3eb 60%, #ecf0fb 40%);*/
+
 input[type="range"]::-webkit-slider-runnable-track {
   width: 100%;
   height: 8px;
   cursor: pointer;
   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-  background: #3071a9;
+  background: linear-gradient(90deg, #ecf0fb 60%, #ecf0fb 40%);
   border-radius: 5px;
   border: 0.2px solid #010101;
 }
 
 input[type="range"]:focus::-webkit-slider-runnable-track {
-  background: #367ebd;
+  background: linear-gradient(90deg, #ecf0fb 60%, #ecf0fb 40%);
 }
 
 input[type="range"]::-moz-range-track {
@@ -138,7 +144,7 @@ input[type="range"]::-moz-range-track {
   height: 8px;
   cursor: pointer;
   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-  background: #3071a9;
+  background: linear-gradient(90deg, #ecf0fb 60%, #ecf0fb 40%);
   border-radius: 5px;
   border: 0.2px solid #010101;
 }
@@ -153,22 +159,22 @@ input[type="range"]::-ms-track {
   color: transparent;
 }
 input[type="range"]::-ms-fill-lower {
-  background: #2a6495;
+  background: linear-gradient(90deg, #ecf0fb 60%, #ecf0fb 40%);
   border: 0.2px solid #010101;
   border-radius: 2.6px;
   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
 }
 input[type="range"]:focus::-ms-fill-lower {
-  background: #3071a9;
+  background: linear-gradient(90deg, #ecf0fb 60%, #ecf0fb 40%);
 }
 input[type="range"]::-ms-fill-upper {
-  background: #3071a9;
+  background: linear-gradient(90deg, #ecf0fb 60%, #ecf0fb 40%);
   border: 0.2px solid #010101;
   border-radius: 2.6px;
   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
 }
 input[type="range"]:focus::-ms-fill-upper {
-  background: #367ebd;
+  background: linear-gradient(90deg, #ecf0fb 60%, #ecf0fb 40%);
 }
 /*----------END of the slider -----*/
 
@@ -315,10 +321,93 @@ button {
   margin-top: 25px;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 800px) {
+  .heroText {
+    width: 395px;
+    height: 71px;
+    margin: 0 auto 125px auto;
+  }
+
+  .heroText br {
+    display: none;
+  }
+
+  h1 {
+    color: #293356;
+    font-weight: 800;
+    font-size: 1.75rem;
+    line-height: 2.375rem;
+  }
+
+  .mainText {
+    font-size: 0.9375rem;
+    line-height: 1.25rem;
+  }
+
+  .pricingBlock {
+    width: 540px;
+    height: 397px;
+  }
+
+  .desktopPricingSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 55px;
+  }
+
+  .desktopHidden {
+    display: none;
+  }
+
+  .pageViews {
+    font-size: 0.875rem;
+    line-height: 1.1875rem;
+    letter-spacing: 2px;
+    padding-top: 5px;
+  }
+
+  #chargeAmount {
+    font-size: 2.5rem;
+    line-height: 3.4375rem;
+    letter-spacing: -1px;
+  }
+
+  .monthTitle {
+    font-size: 1rem;
+    line-height: 1.375rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  .slideContainer {
+    padding-bottom: 35px;
+  }
+
+  .featuresSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 55px;
+  }
+
+  .benefits {
+    text-align: left;
+  }
+
+  button {
+    margin-bottom: 30px;
+  }
 }
