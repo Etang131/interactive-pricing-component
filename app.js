@@ -28,7 +28,6 @@ const init = function () {
 
   discountBtn.addEventListener("click", () => {
     discountApplied();
-    console.log("Discount Applied");
   });
 };
 init();
