@@ -1,36 +1,34 @@
-/*Slider styles */
-var sliderPrice = document.getElementById("myRange");
-var output = document.getElementById("myRange").value;
+const init = function () {
+  const sliderPrice = document.getElementById("myRange");
+  const viewsOutput = document.getElementById("pageViewsAmount");
+  const priceOutput = document.getElementById("chargeAmount");
+  const discountBtn = document.getElementById("discount");
 
-//Make switch statement to get var value to show for the price
-/*
-output.innerHTML = slider.value;
+  const views = ["10K", "50K", "100K", "500K", "1M"];
+  const prices = ["8", "12", "16", "24", "36"];
 
-slider.oninput = function() {
-  output.innerHTML = this.value;
-}
+  function discountApplied() {
+    if (discountBtn.checked) {
+      priceOutput.innerHTML = `$${prices[sliderPrice.value] * 0.75}.00`;
+      viewsOutput.innerHTML = `${views[sliderPrice.value]}`;
+    } else {
+      priceOutput.innerHTML = `$${prices[sliderPrice.value]}.00`;
+      viewsOutput.innerHTML = `${views[sliderPrice.value]} `;
+    }
+  }
 
+  sliderPrice.addEventListener("input", (e) => {
+    e.preventDefault();
+    discountApplied();
+    const color = `linear-gradient(90deg, rgb(165, 243, 235) ${
+      sliderPrice.value * 25
+    }%, rgb(234, 238, 251) ${sliderPrice.value * 25}%)`;
+    sliderPrice.style.background = color;
+  });
 
-*/
-
-var start_value = sliderPrice.getAttribute("value");
-
-var x = start_value;
-var color =
-  "linear-gradient(90deg, rgb(164, 243, 235)" +
-  x +
-  "% , rgb(236, 240, 251)" +
-  x +
-  "%)";
-sliderPrice.style.background = color;
-
-sliderPrice.addEventListener("mousemove", function () {
-  x = sliderPrice.value;
-  color =
-    "linear-gradient(90deg, rgb(164, 243, 235)" +
-    x +
-    "% , rgb(236, 240, 251)" +
-    x +
-    "%)";
-  sliderPrice.style.background = color;
-});
+  discountBtn.addEventListener("click", () => {
+    discountApplied();
+    console.log("Discount Applied");
+  });
+};
+init();
