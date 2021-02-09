@@ -4,6 +4,9 @@ const init = function () {
   const priceOutput = document.getElementById("chargeAmount");
   const discountBtn = document.getElementById("discount");
 
+  const viewsOutputMobile = document.getElementById("pageViewsAmountMobile");
+  const priceOutputMobile = document.getElementById("chargeAmountMobile");
+
   const views = ["10K", "50K", "100K", "500K", "1M"];
   const prices = ["8", "12", "16", "24", "36"];
 
@@ -11,9 +14,13 @@ const init = function () {
     if (discountBtn.checked) {
       priceOutput.innerHTML = `$${prices[sliderPrice.value] * 0.75}.00`;
       viewsOutput.innerHTML = `${views[sliderPrice.value]}`;
+      priceOutputMobile.innerHTML = `$${prices[sliderPrice.value] * 0.75}.00`;
+      viewsOutputMobile.innerHTML = `${views[sliderPrice.value]}`;
     } else {
       priceOutput.innerHTML = `$${prices[sliderPrice.value]}.00`;
       viewsOutput.innerHTML = `${views[sliderPrice.value]} `;
+      priceOutputMobile.innerHTML = `$${prices[sliderPrice.value]}.00`;
+      viewsOutputMobile.innerHTML = `${views[sliderPrice.value]} `;
     }
   }
 
@@ -24,6 +31,7 @@ const init = function () {
       sliderPrice.value * 25
     }%, rgb(234, 238, 251) ${sliderPrice.value * 25}%)`;
     sliderPrice.style.background = color;
+    console.log(color);
   });
 
   discountBtn.addEventListener("click", () => {
